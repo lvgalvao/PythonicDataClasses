@@ -1,5 +1,5 @@
 import requests
-from models_dataclass import Personagem  # Certifique-se de importar o modelo correto
+from models import Personagem  # Certifique-se de importar o modelo correto
 import csv
 # from pydantic import ValidationError  # Importado para tratamento de erro
 
