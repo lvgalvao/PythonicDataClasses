@@ -2,7 +2,7 @@ from dataclasses import dataclass
 import re
 
 @dataclass
-class Character:
+class Personagem:
     id: int
     name: str
     status: str

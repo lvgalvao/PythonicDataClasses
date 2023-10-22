@@ -1,5 +1,5 @@
 import requests
-from models_dataclass import Character  # Certifique-se de importar o modelo correto
+from models_dataclass import Personagem  # Certifique-se de importar o modelo correto
 import csv
 # from pydantic import ValidationError  # Importado para tratamento de erro
 
@@ -12,7 +12,7 @@ def fetch_characters() -> list:
     for index, item in enumerate(data['results'], start=1):
         try:
             # Aqui, Pydantic irá validar os dados automaticamente ao criar o modelo
-            character = Character(
+            character = Personagem(
                 id=item['id'],
                 name=item['name'],
                 status=item['status'],

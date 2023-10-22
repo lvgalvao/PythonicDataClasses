@@ -1,6 +1,6 @@
 from pydantic import BaseModel, HttpUrl
 
-class Character(BaseModel):
+class Personagem(BaseModel):
     id: int
     name: str
     status: str
