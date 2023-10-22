@@ -1,7 +1,7 @@
 import requests
 from models import Personagem  # Certifique-se de importar o modelo correto
 import csv
-# from pydantic import ValidationError  # Importado para tratamento de erro
+from pydantic import ValidationError  # Importado para tratamento de erro
 
 def fetch_characters() -> list:
     url = f'https://rickandmortyapi.com/api/character/?page=1'
@@ -22,7 +22,7 @@ def fetch_characters() -> list:
             )
             characters.append(character)
 
-        except ValueError as e:
+        except ValidationError as e: # Para usar DataClasse mudar para ValueError
             print(f"Error in {index}: {e}")
             continue
 
