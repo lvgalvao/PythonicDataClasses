@@ -12,6 +12,8 @@ requests = "^2.31.0"
 types-requests = "^2.31.0.10"
 pydantic = "^2.4.2"
 pandas = "^2.1.1"
+mkdocstrings-python = "^1.7.3"
+mkdocs-material = "^9.4.6"
 
 
 [build-system]

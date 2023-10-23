@@ -55,34 +55,34 @@
 
 4- Configuração do MkDocs
 
-    site_name: "Minha documentação incrível"
-    theme:
-    name: material
-    palette:
-        primary: deep blue
-    language: pt
+site_name: "Minha documentação incrível"
+theme:
+  name: material
+  palette:
+    primary: deep blue
+  language: pt
 
-    repo_name: "lvgalvao/PythonicDataClasses"
-    repo_url: "https://github.com/lvgalvao/PythonicDataClasses"
-    nav:
+  repo_name: "lvgalvao/PythonicDataClasses"
+  repo_url: "https://github.com/lvgalvao/PythonicDataClasses"
+  nav:
     - Modelos: index.md
 
-    plugins:
+  plugins:
     - search
     - mkdocstrings:
         default_handler: python
 
 5- Configuração do index.md
 
-    # Referência dos nossos modelos
+# Referência dos nossos modelos
 
-    Aqui estão as classes do nosso projeto
+Aqui estão as classes do nosso projeto
 
-    ## Classes
+## Classes
 
-    ### Personagem
+### Personagem
 
-    ::: src.models.Personagem
+::: src.models.Personagem
     
 6- Rodando nosso servidor de documentação localmente
 
