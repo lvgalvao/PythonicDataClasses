@@ -84,7 +84,7 @@
 
     ::: src.models.Personagem
     
-6- Rodando nosso servidor de documentação local
+6- Rodando nosso servidor de documentação localmente
 
     mkdocs serve
 
