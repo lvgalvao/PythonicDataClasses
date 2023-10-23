@@ -1,0 +1,93 @@
+
+1- Escrever a documentação da sua Classe usando Docstrings
+    Exemplo de uma Docstrings para a Classe Personagem
+
+    """
+    Representa um personagem com atributos específicos.
+
+    Args:
+        id (int): O identificador único do personagem.
+        name (str): O nome do personagem.
+        status (str): O status atual do personagem.
+        species (str): A espécie do personagem.
+        gender (str): O gênero do personagem.
+        url (HttpUrl): O URL associado ao personagem, deve ser uma string válida de URL.
+
+    Example:
+        Instanciando e acessando os atributos de `Personagem`:
+
+        ```python
+        rick = Personagem(
+            id=1,
+            name="Rick Sanchez",
+            status="Alive",
+            species="Human",
+            gender="Male",
+            url="https://rickandmortyapi.com/api/location/3"
+        )
+        print(rick.id)  # Output: 1
+
+        morty = Personagem(
+            id=2,
+            name="Morty Smith",
+            status="Alive",
+            species="Human",
+            gender="Male",
+            url="https://rickandmortyapi.com/api/location/3"
+        )
+        print(morty.name)  # Output: 'Morty Smith'
+        ```
+
+    Você pode acessar os atributos como `rick.id`, `rick.name`, etc.
+    """
+
+2- Instalação das ferramentas necessárias para nossa documentação:
+
+    Primeiro, você precisa ter o MkDocs instalado, junto com o plugin mkdocstrings-python que permite 
+    carregar automaticamente docstrings do código Python em seus documentos MkDocs. Além dele,
+    vamos trabalhar com o mkdocs-material para estilizar nossa documentação
+
+    poetry add mkdocs mkdocstrings-python mkdocs-material
+
+3- Iniciando um novo projeto
+
+    mkdocs new .
+
+4- Configuração do MkDocs
+
+    site_name: "Minha documentação incrível"
+    theme:
+    name: material
+    palette:
+        primary: deep blue
+    language: pt
+
+    repo_name: "lvgalvao/PythonicDataClasses"
+    repo_url: "https://github.com/lvgalvao/PythonicDataClasses"
+    nav:
+    - Modelos: index.md
+
+    plugins:
+    - search
+    - mkdocstrings:
+        default_handler: python
+
+5- Configuração do index.md
+
+    # Referência dos nossos modelos
+
+    Aqui estão as classes do nosso projeto
+
+    ## Classes
+
+    ### Personagem
+
+    ::: src.models.Personagem
+    
+6- Rodando nosso servidor de documentação local
+
+    mkdocs serve
+
+7- Fazendo o deploy da documentação
+
+    mkdocs gh-deploy
