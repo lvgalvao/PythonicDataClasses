@@ -1,0 +1,16 @@
+site_name: "Minha documentação incrível"
+theme:
+  name: material
+  palette:
+    primary: deep blue
+  language: pt
+
+repo_name: "lvgalvao/PythonicDataClasses"
+repo_url: "https://github.com/lvgalvao/PythonicDataClasses"
+nav:
+  - Modelos: index.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
